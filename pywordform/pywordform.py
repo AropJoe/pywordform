@@ -62,9 +62,9 @@ except ImportError:
             # Python <2.5: standalone ElementTree install
             import elementtree.cElementTree as ET
         except ImportError:
-            raise ImportError, "lxml or ElementTree are not installed, "\
+            raise ImportError("lxml or ElementTree are not installed, "\
                 +"see http://codespeak.net/lxml "\
-                +"or http://effbot.org/zone/element-index.htm"
+                +"or http://effbot.org/zone/element-index.htm")
 
 
 # namespace for word XML tags:
@@ -121,4 +121,4 @@ def parse_form(filename):
 if __name__ == '__main__':
     fields = parse_form(sys.argv[1])
     for tag, value in sorted(fields.items()):
-        print '%s = "%s"' % (tag, value)
+        print('{} = {}'.format(tag, value))
