@@ -19,7 +19,7 @@ Open sample_form.docx in MS Word, and edit field values.
 
 From the shell, extract all fields with tags:
 
-> python pywordform.py sample_form.docx
+> python3 pywordform.py sample_form.docx
 field1 = "hello, world."
 field2 = "hello,"
 field3 = "value B"
@@ -29,7 +29,7 @@ In a python script:
 
 import pywordform
 fields = pywordform.parse_form('sample_form.docx')
-print fields
+print(fields)
 
 => this returns a dictionary of field values indexed by tags.
 
